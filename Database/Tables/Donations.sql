@@ -1,8 +1,5 @@
-
-
-    
-CREATE TABLE Donations(
-	DonationID INT NOT NULL AUTO_INCREMENT,
+   CREATE TABLE Donations(
+    DonationID INT NOT NULL AUTO_INCREMENT,
     EmployeeAMKA BIGINT NOT NULL,
     DonorID INT NOT NULL,
     DateOfDonation DATE NOT NULL,
