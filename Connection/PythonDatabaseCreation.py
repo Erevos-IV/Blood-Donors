@@ -7,5 +7,3 @@ mycursor = mydb.cursor()
 
 mycursor.execute("Create database BloodDonors")
 mycursor.execute("show databases")
-for db in mycursor:
-    print(db)
