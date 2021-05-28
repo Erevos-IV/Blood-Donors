@@ -1,11 +1,11 @@
 DELIMITER //
 CREATE PROCEDURE PrintTodayAppointments()
 BEGIN
-	DECLARE Todayday INT(5); 
+    DECLARE Todayday INT(5); 
     SET Todayday = EXTRACT(Day FROM CURRENT_DATE);
- SELECT * 
- FROM Appointments
- WHERE EXTRACT(DAY FROM AppointmentDate) = Todayday;
+    	SELECT * 
+        FROM Appointments
+ 	WHERE EXTRACT(DAY FROM AppointmentDate) = Todayday;
 END //
 DELIMITER ;
 
