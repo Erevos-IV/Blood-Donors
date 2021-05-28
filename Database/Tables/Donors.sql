@@ -1,6 +1,6 @@
 
 CREATE TABLE Donors(
-	DonorID INT NOT NULL AUTO_INCREMENT,
+    DonorID INT NOT NULL AUTO_INCREMENT,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
     Phone VARCHAR(15) NOT NULL,
@@ -20,3 +20,4 @@ CREATE TABLE Donors(
 ) ENGINE = InnoDB;
 
 -- AMKA is a unique number to identify a person.
+-- Donors must be 18+ and 70-.
