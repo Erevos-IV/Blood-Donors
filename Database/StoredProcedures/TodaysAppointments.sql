@@ -11,4 +11,4 @@ DELIMITER ;
 
 CALL PrintTodayAppointments();
 
--- This function will print all the appointments that are the same day as the day of the "call" day.
+-- This function will print all the appointments that are the same day as the day of the "call" date.
