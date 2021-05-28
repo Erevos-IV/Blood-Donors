@@ -1,5 +1,3 @@
-# Will soon split the source code in smaller parts.
-
 # imports.
 import mysql.connector
 
@@ -27,7 +25,14 @@ def PrintUpcomingAppointments():
         print(result.fetchall())
 
 def DonationsPerDonor():
+
     mycursor.callproc('DonationsPerDonor')
+    for result in mycursor.stored_results():
+        print(result.fetchall())
+
+def TodayAppointments():
+
+    mycursor.callproc('PrintTodayAppointments')
     for result in mycursor.stored_results():
         print(result.fetchall())
 
@@ -36,6 +41,7 @@ print("1- View all the donors")
 print("2- View all the employees")
 print("3- View all upcoming Appointments")
 print("4- View all the donations per donor")
+print("5- View all the appointments for today")
 # User will choose what he wants to see.
 input = str(input("Select a number: "))
 
@@ -54,9 +60,11 @@ elif input == '3':
 elif input == '4':
     print("Donations Per Donor")
     DonationsPerDonor()
+
+elif input == '5':
+    print("All the appointments for today")
+    TodayAppointments()
+
 else:
     print("Exiting...")
-
-
-
 
