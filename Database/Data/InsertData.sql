@@ -1,3 +1,4 @@
+-- This is the synthetic data. These numbers are not real.
 -- Sign table
 INSERT INTO Signs VALUES(1, "Positive");
 INSERT INTO Signs VALUES(2, "Negative");
