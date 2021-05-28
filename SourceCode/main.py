@@ -20,11 +20,22 @@ def PrintEmployees():
         print(result.fetchall())
 
 # MENU #
+print("1- View all the donors")
+print("2- View all the employees")
 
 # User will choose what he wants to see.
-input = int(input("Select a number: "))
-if input == 1:
-    PrintDonors()
+input = str(input("Select a number: "))
 
-if input == 2:
+if input == '1':
+     print("All Donors")
+     PrintDonors()
+
+
+elif input == '2':
+    print("All employees:")
     PrintEmployees()
+
+else:
+    print("Exiting...")
+
+
