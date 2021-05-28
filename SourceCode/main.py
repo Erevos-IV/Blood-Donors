@@ -1,3 +1,5 @@
+# Will soon split the source code in smaller parts.
+
 # imports.
 import mysql.connector
 
