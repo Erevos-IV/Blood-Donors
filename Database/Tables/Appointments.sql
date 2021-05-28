@@ -1,9 +1,9 @@
-CREATE TABLE Appointments (
-	AppointmentID INT NOT NULL AUTO_INCREMENT,
-    DonorID INT NOT NULL,
-    AppointmentDate DATE NOT NULL,
-    
-    PRIMARY KEY(AppointmentID),
-    FOREIGN KEY(DonorID) REFERENCES Donors(DonorID)
-    
-)ENGINE = InnoDB;
+DELIMITER //
+CREATE PROCEDURE PrintUpcomingAppointments()
+BEGIN
+	SELECT AppointmentID, don.DonorID, AppointmentDate, don.Firstname, don.LastName, don.Phone
+	FROM appointments 
+	INNER JOIN donors as don
+	WHERE AppointmentDate-CURDATE() > 0;
+END //
+DELIMITER ;
