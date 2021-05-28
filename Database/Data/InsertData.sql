@@ -33,3 +33,14 @@ INSERT INTO Employees VALUES(2002150392, "Theodwra", "Lafazanh", 24, 2103471937,
 INSERT INTO Employees VALUES(2002162926, "Lewnidas", "Thermopylas", 31, 6937195739, "fightLewn@gmail.com", "2021-02-20 12:00:00", 99140); 
 INSERT INTO Employees VALUES(2002131739, "Klewpatra", "Erhmoy", 42, 8104629472, "Throneismine@proton.prt", "2019-07-10 19:24:20", 60500);
  
+-- Donors table
+INSERT INTO Donors VALUES
+(1,"Bill", "Leonardou", 9201749273, 22, 2002109385, 2,4,2), 
+(2, "Spyros", "Gewrgiadhs", 9174629561, 39, 2946281649, 5,8,1),
+(3, "Kyriakos", "Tsipras", 9176194025, 44, 6482648194, 1,3,2),
+(4, "Aleksis", "Fwtiadhs", 9174629561, 19, 37291648949, 2,1,2),
+(5, "Marina", "Pelwnh", 9295629561, 48, 5833829588, 2,3,2),
+(6, "Katerina", "Galata", 9164810472, 28, 9274618492, 10,7,1),
+(7, "Elpida", "Geronikolaou", 91746295619, 39, 2946281649, 3, 3, 1);
+
+ 
