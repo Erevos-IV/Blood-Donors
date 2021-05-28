@@ -1,9 +1,9 @@
 
 CREATE TABLE TeamBlood(
-	TBID INT NOT NULL AUTO_INCREMENT,
+    TBID INT NOT NULL AUTO_INCREMENT,
     Title VARCHAR(5) NOT NULL,
     SignID INT NOT NULL,
-	AdditionalComments TEXT,
+    AdditionalComments TEXT,
     
     PRIMARY KEY(TBID),
     FOREIGN KEY(SignID) REFERENCES Signs(SignID)
