@@ -5,6 +5,7 @@ import mysql.connector
 mydb = mysql.connector.connect(host="localhost", user="vasilhs", password="bill", database ="BloodDonors", buffered=True)
 mycursor = mydb.cursor()
 
+
 # Printing all donors in the database.
 def PrintDonors():
 
@@ -36,35 +37,45 @@ def TodayAppointments():
     for result in mycursor.stored_results():
         print(result.fetchall())
 
+
+
 # MENU #
 print("1- View all the donors")
 print("2- View all the employees")
 print("3- View all upcoming Appointments")
 print("4- View all the donations per donor")
 print("5- View all the appointments for today")
+
 # User will choose what he wants to see.
-input = str(input("Select a number: "))
+Start = True
+while Start:
 
-if input == '1':
-     print("All Donors")
-     PrintDonors()
+    choose = int(input("Select a number: "))
 
-elif input == '2':
-    print("All employees:")
-    PrintEmployees()
+    if choose == 1:
+         print("All Donors")
+         PrintDonors()
+         
 
-elif input == '3':
-    print("Upcoming Appointments")
-    PrintUpcomingAppointments()
+    elif choose == 2:
+        print("All employees:")
+        PrintEmployees()
 
-elif input == '4':
-    print("Donations Per Donor")
-    DonationsPerDonor()
+    elif choose == 3:
+        print("Upcoming Appointments")
+        PrintUpcomingAppointments()
 
-elif input == '5':
-    print("All the appointments for today")
-    TodayAppointments()
+    elif choose == 4:
+        print("Donations Per Donor")
+        DonationsPerDonor()
 
-else:
-    print("Exiting...")
+    elif choose == 5:
+        print("All the appointments for today")
+        TodayAppointments()
+
+    else:
+        print("Exiting...")
+        Start = False
+
+
 
