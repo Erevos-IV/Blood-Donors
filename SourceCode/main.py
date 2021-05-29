@@ -39,7 +39,11 @@ def TodayAppointments():
 
 
 
+
 # MENU #
+print("-"*40)
+print("Welcome To The Donation System")
+print("-"*40)
 print("1- View all the donors")
 print("2- View all the employees")
 print("3- View all upcoming Appointments")
@@ -55,7 +59,7 @@ while Start:
     if choose == 1:
          print("All Donors")
          PrintDonors()
-         
+
 
     elif choose == 2:
         print("All employees:")
@@ -76,6 +80,5 @@ while Start:
     else:
         print("Exiting...")
         Start = False
-
 
 
