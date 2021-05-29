@@ -8,7 +8,7 @@ FOR EACH ROW
 	DECLARE changes VARCHAR(200);
         
         SET changes = CONCAT(NEW.AMKA,', ',
-			                       NEW.FirstName,', ',
+		             NEW.FirstName,', ',
                              NEW.LastName,', ',
                              NEW.Age,', ',
                              NEW.Phone,', ',
