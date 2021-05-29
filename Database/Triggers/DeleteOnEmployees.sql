@@ -8,7 +8,7 @@ FOR EACH ROW
 	DECLARE changes VARCHAR(200);
         
         SET changes = CONCAT(OLD.AMKA,', ',
-			                 OLD.FirstName,', ',
+			     OLD.FirstName,', ',
                              OLD.LastName,', ',
                              OLD.Age,', ',
                              OLD.Phone,', ',
@@ -19,4 +19,5 @@ FOR EACH ROW
 	INSERT INTO EmployeeChanges
         VALUES (CURRENT_USER(), 'DELETE', changes, CURRENT_TIMESTAMP());
 	END //
+	
 DELIMITER ;
