@@ -37,8 +37,11 @@ def TodayAppointments():
     for result in mycursor.stored_results():
         print(result.fetchall())
 
-
-
+def SearchDonorByAMKA(amka):
+    amk= (amka,)
+    mycursor.callproc('DonorsByAMKA', amk)
+    for result in mycursor.stored_results():
+        print(result.fetchall())
 
 # MENU #
 print("-"*40)
@@ -49,6 +52,7 @@ print("2- View all the employees")
 print("3- View all upcoming Appointments")
 print("4- View all the donations per donor")
 print("5- View all the appointments for today")
+print("6- Search donors by AMKA")
 
 # User will choose what he wants to see.
 Start = True
@@ -76,6 +80,10 @@ while Start:
     elif choose == 5:
         print("All the appointments for today")
         TodayAppointments()
+
+    elif choose == 6:
+        amka = input("Give me the AMKA: ")
+        SearchDonorByAMKA(amka)
 
     else:
         print("Exiting...")
