@@ -9,3 +9,4 @@
     FOREIGN KEY(EmployeeAMKA) REFERENCES Employees(AMKA)
     
 ) ENGINE = InnoDB;
+
