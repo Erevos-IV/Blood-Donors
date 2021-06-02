@@ -8,40 +8,59 @@ mycursor = mydb.cursor()
 
 # Printing all donors in the database.
 def PrintDonors():
+    try:
+         mycursor.callproc('PrintDonors')
+         for result in mycursor.stored_results():
+             print(result.fetchall())
 
-     mycursor.callproc('PrintDonors')
-     for result in mycursor.stored_results():
-         print(result.fetchall())
+    except Exception as error:
+        print(f"OOPS {error}")
 
 def PrintEmployees():
+    try:
+        mycursor.callproc('PrintEmployees')
+        for result in mycursor.stored_results():
+            print(result.fetchall())
 
-    mycursor.callproc('PrintEmployees')
-    for result in mycursor.stored_results():
-        print(result.fetchall())
+    except Exception as error:
+        print(f"OOPS {error}")
 
 def PrintUpcomingAppointments():
+    try:
+        mycursor.callproc('PrintUpcomingAppointments')
+        for result in mycursor.stored_results():
+            print(result.fetchall())
 
-    mycursor.callproc('PrintUpcomingAppointments')
-    for result in mycursor.stored_results():
-        print(result.fetchall())
+    except Exception as error:
+        print(f"OOPS {error}")
 
 def DonationsPerDonor():
+    try:
 
-    mycursor.callproc('DonationsPerDonor')
-    for result in mycursor.stored_results():
-        print(result.fetchall())
+        mycursor.callproc('DonationsPerDonor')
+        for result in mycursor.stored_results():
+            print(result.fetchall())
+
+    except Exception as error:
+        print(f"OOPS {error}")
 
 def TodayAppointments():
+    try:
+        mycursor.callproc('PrintTodayAppointments')
+        for result in mycursor.stored_results():
+            print(result.fetchall())
 
-    mycursor.callproc('PrintTodayAppointments')
-    for result in mycursor.stored_results():
-        print(result.fetchall())
+    except Exception as error:
+        print(error)
 
 def SearchDonorByAMKA(amka):
-    amk= (amka,)
-    mycursor.callproc('DonorsByAMKA', amk)
-    for result in mycursor.stored_results():
-        print(result.fetchall())
+    try:
+        amk= (amka,)
+        mycursor.callproc('DonorsByAMKA', amk)
+        for result in mycursor.stored_results():
+            print(result.fetchall())
+    except:
+        print("Error, Please check the function")
 
 # MENU #
 print("-"*40)
@@ -88,5 +107,8 @@ while Start:
     else:
         print("Exiting...")
         Start = False
+
+
+
 
 
