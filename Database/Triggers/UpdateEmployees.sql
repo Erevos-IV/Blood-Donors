@@ -6,7 +6,7 @@ FOR EACH ROW
 	DECLARE changes VARCHAR(200);
 	DECLARE beforechanges VARCHAR(200);
 		set beforechanges = CONCAT(OLD.AMKA,', ',
-		                           OLD.FirstName,', ',
+		               OLD.FirstName,', ',
                                OLD.LastName,', ',
                                OLD.Age,', ',
                                OLD.Phone,', ',
@@ -15,7 +15,7 @@ FOR EACH ROW
                                OLD.Salary);
                              
         SET changes = CONCAT(NEW.AMKA,', ',
-		                         NEW.FirstName,', ',
+		             NEW.FirstName,', ',
                              NEW.LastName,', ',
                              NEW.Age,', ',
                              NEW.Phone,', ',
