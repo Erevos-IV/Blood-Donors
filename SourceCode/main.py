@@ -2,9 +2,27 @@
 import mysql.connector
 
 # Connector.
+
 mydb = mysql.connector.connect(host="localhost", user="vasilhs", password="bill", database ="BloodDonors", buffered=True)
 mycursor = mydb.cursor()
 
+Credentials = {'Vasilhs':'VG10111', 'Admin2021':'Billaros'}
+def loginUser():
+
+    username = input('Enter username: ')
+    password = input('Enter password: ')
+
+    if username in Credentials:
+        if password==Credentials[username]:
+            print('Login Successful')
+            pass
+        else:
+            print('Username or password is wrong, try again!')
+            loginUser()
+
+    else:
+        print('Username or password is wrong, try again!')
+        loginUser()
 
 # Printing all donors in the database.
 def PrintDonors():
@@ -62,6 +80,9 @@ def SearchDonorByAMKA(amka):
     except:
         print("Error, Please check the function")
 
+# Login page #
+loginUser()
+
 # MENU #
 print("-"*40)
 print("Welcome To The Donation System")
@@ -74,6 +95,7 @@ print("5- View all the appointments for today")
 print("6- Search donors by AMKA")
 
 # User will choose what he wants to see.
+
 Start = True
 while Start:
 
