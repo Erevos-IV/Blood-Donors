@@ -80,6 +80,17 @@ def SearchDonorByAMKA(amka):
     except:
         print("Error, Please check the function")
 
+def SeeNewInserts():
+
+    try:
+        mycursor.execute("Select * FROM employeeChanges")
+        result = mycursor.fetchall()
+        for res in result:
+            print(f"{res} \n")
+
+    except Exception as ex:
+        print(ex)
+
 # Login page #
 loginUser()
 
@@ -93,6 +104,7 @@ print("3- View all upcoming Appointments")
 print("4- View all the donations per donor")
 print("5- View all the appointments for today")
 print("6- Search donors by AMKA")
+print("7- See any changes in Employees")
 
 # User will choose what he wants to see.
 
@@ -126,10 +138,12 @@ while Start:
         amka = input("Give me the AMKA: ")
         SearchDonorByAMKA(amka)
 
+    elif choose == 7:
+        SeeNewInserts()
+
     else:
         print("Exiting...")
         Start = False
-
 
 
 
