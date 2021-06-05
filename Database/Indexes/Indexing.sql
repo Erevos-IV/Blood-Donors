@@ -12,3 +12,4 @@ ON donations(DonationID);
 
 CREATE INDEX appointmentsIDX
 ON appointments(AppointmentID);
+
