@@ -91,23 +91,26 @@ def SeeNewInserts():
     except Exception as ex:
         print(ex)
 
+def Menu():
+    # MENU #
+    print("-"*40)
+    print("Welcome To The Donation System")
+    print("-"*40)
+    print("1- View all the donors")
+    print("2- View all the employees")
+    print("3- View all upcoming Appointments")
+    print("4- View all the donations per donor")
+    print("5- View all the appointments for today")
+    print("6- Search donors by AMKA")
+    print("7- See any changes in Employees")
+
 # Login page #
 loginUser()
 
-# MENU #
-print("-"*40)
-print("Welcome To The Donation System")
-print("-"*40)
-print("1- View all the donors")
-print("2- View all the employees")
-print("3- View all upcoming Appointments")
-print("4- View all the donations per donor")
-print("5- View all the appointments for today")
-print("6- Search donors by AMKA")
-print("7- See any changes in Employees")
+# Menu #
+Menu()
 
 # User will choose what he wants to see.
-
 Start = True
 while Start:
 
@@ -144,7 +147,4 @@ while Start:
     else:
         print("Exiting...")
         Start = False
-
-
-
 
